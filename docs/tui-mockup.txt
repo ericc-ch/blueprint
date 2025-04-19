@@ -1,3 +1,5 @@
+MAIN VIEW
+
 ┌─────────────────────────────────────────────────────────────────────────────┐
 │ Search: [ ]                                                   (/ to focus)│
 ├──────────────────────────────┬──────────────────────────────────────────────┤
@@ -18,4 +20,133 @@
 │   ...                        │                                              │
 ├──────────────────────────────┴──────────────────────────────────────────────┤
 │ [↑/↓]: Nav | [Enter]: View Details | [o]: Open Spec | [Shift+O]: Open File | [a]: Apply Spec | [u]: Update Spec | [/]: Search | [Q]: Quit │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+---
+
+MODULE DETAILS
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ [ AI Interaction Log / Chat History ]                  (Press [Tab] to Switch View) │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                              [Scrollable] │
+│ [USER ACTION] - 17:15:30 PM                                                 │
+│   Triggered: Apply Spec changes to Code                                     │
+│   File: ./src/service.py                                                    │
+│                                                                             │
+│ [ASSISTANT] - 17:15:30 PM                                                   │
+│   Status: Running...                                                        │
+│   Okay, applying changes from ./src/service.py.spec.md to ./src/service.py. │
+│                                                                             │
+│   > Analyzing spec changes... Identified modifications in 'handle_request'. │
+│   > Generating updated code block...                                        │
+│   ```python                                                                 │
+│   # Applying changes to handle_request                                      │
+│   def handle_request(data: Dict) -> Response:                               │
+│       logger.info(f"Processing request with data: {data}")                  │
+│       user_id = data.get("user_id")                                         │
+│       if not user_id:                                                       │
+│           # Return 400 Bad Request if user_id is missing (New logic)        │
+│           return Response(status_code=400, body={"error": "Missing user_id"})│
+│       # ... rest of the function                                            │
+│   ```                                                                       │
+│   > Code block generated. Applying changes...                               │
+│   Status: Completed successfully (17:15:45 PM)                              │
+│                                                                             │
+│ --------------------------------------------------------------------------- │
+│                                                                             │
+│ [USER ACTION] - 17:17:05 PM                                                 │
+│   Triggered: Update Spec from Code                                          │
+│   File: ./config/routes.yaml.spec.md                                        │
+│                                                                             │
+│ [ASSISTANT] - 17:17:05 PM                                                   │
+│   Status: Running...                                                        │
+│   Okay, analyzing ./config/routes.yaml to update the spec file.             │
+│                                                                             │
+│   > Reading code file ./config/routes.yaml...                               │
+│   > ERROR: Failed to process the code file.                                 │
+│   > Details: Could not parse YAML file. Invalid syntax near line 23.        │
+│   Status: Error (17:17:06 PM)                                               │
+│                                                                             │
+│                                                                         [↑] │
+│                                                                         [ ] │
+│                                                                         [↓] │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+---
+
+WITH STATUS
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ Project: [MyCoolWebApp] - v1.0.0          [AI: Updating Spec<-Code ◐]       │
+│ Search: [ ]                                                   (/ to focus)│
+├──────────────────────────────┬──────────────────────────────────────────────┤
+│ [ Project Structure ]        │ [ Detail View: ./src/utils.py ]              │
+│                              │                                              │
+│  --- GLOBAL ---              │ --- Associated Files ---                     │
+│   📄 global_settings.md      │ Spec: ./src/utils.py.spec.md                 │
+│   📄 coding_standards.md     │ File: ./src/utils.py (Python Code)           │
+│                              │                                              │
+│  --- PROJECT FILES ---       │ --- Spec Summary ---                         │
+│   📄 ./package.json [⇅]      │ Common utility functions, including          │
+│   📄 ./README.md    [⇅]      │ string manipulation and data validation.     │
+│                              │                                              │
+│  --- MODULES ---             │ --- Sync Actions Available ---               │
+│   📁 Module: AuthService     │ [a]: Apply Spec changes to Code              │
+│ > 📄 ./src/utils.py [⇅]      │ [u]: Update Spec from Code                   │
+│   📁 Module: SharedUtils     │ (Processing...)                              │
+│    (...)                     │                                              │
+├──────────────────────────────┴──────────────────────────────────────────────┤
+│ [↑/↓]: Nav | [Enter]: View Details | [o]: Open Spec | [Shift+O]: Open File | [a]: Apply Spec | [u]: Update Spec | [Tab]: Switch View | [/]: Search | [Q]: Quit │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+---
+
+LOG VIEW
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ [ AI Interaction Log / Chat History ]                  (Press [Tab] to Switch View) │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                              [Scrollable] │
+│ [USER ACTION] - 17:15:30 PM                                                 │
+│   Triggered: Apply Spec changes to Code                                     │
+│   File: ./src/service.py                                                    │
+│                                                                             │
+│ [ASSISTANT] - 17:15:30 PM                                                   │
+│   Status: Running...                                                        │
+│   Okay, applying changes from ./src/service.py.spec.md to ./src/service.py. │
+│                                                                             │
+│   > Analyzing spec changes... Identified modifications in 'handle_request'. │
+│   > Generating updated code block...                                        │
+│   ```python                                                                 │
+│   # Applying changes to handle_request                                      │
+│   def handle_request(data: Dict) -> Response:                               │
+│       logger.info(f"Processing request with data: {data}")                  │
+│       user_id = data.get("user_id")                                         │
+│       if not user_id:                                                       │
+│           # Return 400 Bad Request if user_id is missing (New logic)        │
+│           return Response(status_code=400, body={"error": "Missing user_id"})│
+│       # ... rest of the function                                            │
+│   ```                                                                       │
+│   > Code block generated. Applying changes...                               │
+│   Status: Completed successfully (17:15:45 PM)                              │
+│                                                                             │
+│ --------------------------------------------------------------------------- │
+│                                                                             │
+│ [USER ACTION] - 17:17:05 PM                                                 │
+│   Triggered: Update Spec from Code                                          │
+│   File: ./config/routes.yaml.spec.md                                        │
+│                                                                             │
+│ [ASSISTANT] - 17:17:05 PM                                                   │
+│   Status: Running...                                                        │
+│   Okay, analyzing ./config/routes.yaml to update the spec file.             │
+│                                                                             │
+│   > Reading code file ./config/routes.yaml...                               │
+│   > ERROR: Failed to process the code file.                                 │
+│   > Details: Could not parse YAML file. Invalid syntax near line 23.        │
+│   Status: Error (17:17:06 PM)                                               │
+│                                                                             │
+│                                                                         [↑] │
+│                                                                         [ ] │
+│                                                                         [↓] │
 └─────────────────────────────────────────────────────────────────────────────┘
