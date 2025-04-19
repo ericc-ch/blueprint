@@ -25,28 +25,31 @@
   "files": [
     "dist"
   ],
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
     "build": "tsup",
     "lint": "eslint .",
-    "prepack": "pnpm run build",
+    "prepack": "bun run build",
     "prepare": "simple-git-hooks",
-    "release": "bumpp && pnpm publish --access public",
+    "release": "bumpp && bun publish --access public",
     "start": "tsx src/cli.ts",
     "test": "vitest",
     "typecheck": "tsc --noEmit"
   },
   "simple-git-hooks": {
-    "pre-commit": "pnpm exec lint-staged"
+    "pre-commit": "bunx lint-staged"
   },
   "lint-staged": {
-    "*": "pnpm run lint --fix"
+    "*": "bun run lint --fix"
   },
   "dependencies": {
     "citty": "^0.1.6"
   },
   "devDependencies": {
     "@echristian/eslint-config": "^0.0.40",
-    "@types/node": "^22.14.1",
+    "@types/bun": "latest",
     "bumpp": "^10.1.0",
     "eslint": "^9.25.0",
     "jiti": "^2.4.2",
@@ -57,12 +60,5 @@
     "tsx": "^4.19.3",
     "typescript": "^5.8.3",
     "vitest": "^3.1.1"
-  },
-  "packageManager": "pnpm@10.8.1",
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "esbuild",
-      "simple-git-hooks"
-    ]
   }
 }
