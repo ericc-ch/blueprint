@@ -1,0 +1,21 @@
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ Search: [ ]                                                   (/ to focus)│
+├──────────────────────────────┬──────────────────────────────────────────────┤
+│ [ Project Structure ]        │ [ Detail View: ./package.json ]              │
+│                              │                                              │
+│  --- GLOBAL ---              │ --- Associated Files ---                     │
+│   📄 global_settings.md      │ Spec: ./package.json.spec.md                 │
+│                              │ File: ./package.json (JSON Config)           │
+│  --- PROJECT FILES ---       │                                              │
+│ > 📄 ./package.json [⇅]      │ --- Spec Summary ---                         │
+│   📄 ./README.md    [⇅]      │ Root workspace config using npm workspaces.  │
+│   📄 ./web/vite.config.js    │ Manages dependencies for all packages...     │
+│      [⇅]                     │ (Content from spec file)                     │
+│                              │                                              │
+│  --- MODULES ---             │ --- Sync Actions Available ---               │
+│   📁 Module: AuthService     │ [a]: Apply Spec changes to Code              │
+│   📁 Module: ProductCatalog  │ [u]: Update Spec from Code                   │
+│   ...                        │                                              │
+├──────────────────────────────┴──────────────────────────────────────────────┤
+│ [↑/↓]: Nav | [Enter]: View Details | [o]: Open Spec | [Shift+O]: Open File | [a]: Apply Spec | [u]: Update Spec | [/]: Search | [Q]: Quit │
+└─────────────────────────────────────────────────────────────────────────────┘
